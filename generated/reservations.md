@@ -1,5 +1,5 @@
 <!-- Generated from the Reservations assembly. Do not edit. -->
-<!-- Manifest producer: @mit-sdg/sync-engine@1.0.0; concept specification: sync-engine.concept-specification@1; renderer: @mit-sdg/sync-engine@1.0.0. -->
+<!-- Manifest producer: @mit-sdg/sync-engine@1.1.0; concept specification: sync-engine.concept-specification@1; renderer: @mit-sdg/sync-engine@1.1.0. -->
 
 # Reservations — assembled read-back
 
@@ -14,9 +14,9 @@ Defined in [Reserving](../design/concepts/Reserving.md), line 1.
 
 #### Actions
 
-- `reserve(user: User, resource: Resource) : return (reservation: Reservation)`
+- `reserve(user: User, resource: Resource) : returns (reservation: Reservation)`
   - Refuses `ALREADY_RESERVED`: That resource is already reserved.
-- `cancel(reservation: Reservation) : return (reservation: Reservation)`
+- `cancel(reservation: Reservation) : returns (reservation: Reservation)`
   - Refuses `NO_SUCH_RESERVATION`: There is no such reservation.
 
 #### Queries
