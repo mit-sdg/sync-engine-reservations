@@ -6,4 +6,4 @@ if (!url) {
 }
 
 export const client = new MongoClient(url);
-export const db = client.db("myapp");
+export const db = client.db();

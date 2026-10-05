@@ -16,7 +16,7 @@ bun run dev
 
 `bun run dev` starts MongoDB in a container, then the backend at http://127.0.0.1:3000 and the frontend at http://127.0.0.1:8080. Both reload when you save a file. Open http://127.0.0.1:8080 to use the app.
 
-`bun run start` starts both servers without watching for changes. The frontend listens on `0.0.0.0` at `PORT` (8080 by default), and proxies API requests to the backend on `127.0.0.1:4000`. On the deployment platform, set the app port to match `PORT` (3000). Start MongoDB first with `bun run db:up`, or point `MONGODB_URL` in `.env` at an existing database.
+`bun run start` starts both servers without watching for changes. The frontend listens on `0.0.0.0` at `PORT` (8080 by default), and proxies API requests to the backend on `127.0.0.1:4000`. On the deployment platform, set the app port to match `PORT` (3000). Set the health check path to `/health`; it returns HTTP 200 when the frontend can reach the backend and the backend can read MongoDB. Start MongoDB first with `bun run db:up`, or point `MONGODB_URL` in `.env` at an existing database. The app uses the database named in that URI; keep the database name supplied by managed MongoDB.
 
 To run all three in containers instead, the way the app runs once it's deployed, stop `bun run dev` and run:
 
