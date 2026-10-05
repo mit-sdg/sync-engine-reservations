@@ -1,11 +1,11 @@
 {
-  "lockfileVersion": 2,
+  "lockfileVersion": 1,
   "configVersion": 1,
   "workspaces": {
     "": {
       "dependencies": {
-        "@mit-sdg/sync-engine": "1.0.0",
-        "@mit-sdg/sync-engine-http": "1.0.0",
+        "@mit-sdg/sync-engine": "1.1.0",
+        "@mit-sdg/sync-engine-http": "1.1.0",
         "mongodb": "^7.7.0",
       },
       "devDependencies": {
@@ -15,10 +15,13 @@
       },
     },
   },
+  "overrides": {
+    "bson": "7.2.0",
+  },
   "packages": {
-    "@mit-sdg/sync-engine": ["@mit-sdg/sync-engine@1.0.0", "", { "dependencies": { "mdast-util-from-markdown": "^2.0.3", "semver": "^7.7.3", "typescript": ">=6 <7" }, "bin": { "sync-engine": "dist/command/main.js" } }, "sha512-l/9yJmD1LfZ0heUngXLsV88eXI+bticIQZcqsxY9sC+h7OhwYAphY7xH2Akq4cNo78OdhikVutOAMcyg+OdVAg=="],
+    "@mit-sdg/sync-engine": ["@mit-sdg/sync-engine@1.1.0", "", { "dependencies": { "mdast-util-from-markdown": "^2.0.3", "semver": "^7.7.3", "typescript": ">=6 <7" }, "bin": { "sync-engine": "dist/command/main.js" } }, "sha512-thlCGZSbgT1G/BmYDCtM5ugxKUYEuQQKbffUQRGLi4u4LGJ76eR6rfj1/e9uH0DftIi6Sih6cW0CSAvcJdUz3Q=="],
 
-    "@mit-sdg/sync-engine-http": ["@mit-sdg/sync-engine-http@1.0.0", "", { "peerDependencies": { "@mit-sdg/sync-engine": "1.0.0" } }, "sha512-8TgbtUxw7QWmMHY2llS6seM8efMGE9x/hU4Ang/zl3CHZk4X6dcX9rV07hLWf1T41BqQWFYW9/Ci1ruHECWglA=="],
+    "@mit-sdg/sync-engine-http": ["@mit-sdg/sync-engine-http@1.1.0", "", { "peerDependencies": { "@mit-sdg/sync-engine": "1.1.0" } }, "sha512-xQ4l5ggtotV6DqXXmi+8yZZdsAt+5FDtF5Z6z7TPlxDApUdyPuLJxwVwpMYDxlKvyv++qqhy6xpUPz8ZNRwPkw=="],
 
     "@mongodb-js/saslprep": ["@mongodb-js/saslprep@1.5.5", "", { "dependencies": { "sparse-bitfield": "^3.0.3" } }, "sha512-0PV4mvjGd2Q2/viDvXuoSNzTjQngHvtuWUry1vqvcK4Q/CTeO1zEKMf9set01DMocJnogl/pyNAdvyk+Pe0kQA=="],
 
@@ -38,7 +41,7 @@
 
     "@types/whatwg-url": ["@types/whatwg-url@13.0.0", "", { "dependencies": { "@types/webidl-conversions": "*" } }, "sha512-N8WXpbE6Wgri7KUSvrmQcqrMllKZ9uxkYWMt+mCSGwNc0Hsw9VQTW7ApqI4XNrx6/SaM2QQJCzMPDEXE058s+Q=="],
 
-    "bson": ["bson@7.3.3", "", {}, "sha512-oz3LwE3qGEhTCSyhzQRLY3Bj1NLOsjFMf6tcmY5J8M+3R7EVcmoBfSHWvjUK3yXCLDUsGpIuB3aQL4nDZ1EV/g=="],
+    "bson": ["bson@7.2.0", "", {}, "sha512-YCEo7KjMlbNlyHhz7zAZNDpIpQbd+wOEHJYezv0nMYTn4x31eIUM2yomNNubclAt63dObUzKHWsBLJ9QcZNSnQ=="],
 
     "bun-types": ["bun-types@1.4.2", "", { "dependencies": { "@types/node": "*" } }, "sha512-bxV1FgK7yBIzjRe5zBozIM4Bem11ZJcCXSrjWRG3YWLt8yFDePu4cLjpebO8OvPeIE9trbyPF4fuj3Cia4Fj3w=="],
 
