@@ -16,6 +16,8 @@ bun run dev
 
 `bun run dev` starts MongoDB in a container, then the backend at http://127.0.0.1:3000 and the frontend at http://127.0.0.1:8080. Both reload when you save a file. Open http://127.0.0.1:8080 to use the app.
 
+`bun run start` starts both servers without watching for changes, using the same addresses. Start MongoDB first with `bun run db:up`, or point `MONGODB_URL` in `.env` at an existing database.
+
 To run all three in containers instead, the way the app runs once it's deployed, stop `bun run dev` and run:
 
 ```sh
