@@ -23,30 +23,30 @@ external Resource
 
 ```state
 a set of Reservations with
-  a user User
-  a unique resource Resource
+  a User
+  a unique Resource
 ```
 
 ## Actions
 
 ```actions
-reserve(user: User, resource: Resource) : return (reservation: Reservation)
+reserve(user: User, resource: Resource) : returns (reservation: Reservation)
   where resource is already reserved
   then
-    refuse ALREADY_RESERVED "That resource is already reserved."
+    refuses ALREADY_RESERVED "That resource is already reserved."
   where resource is not reserved
   then
     add a new reservation with user and resource
-    return reservation
+    returns reservation
 
-cancel(reservation: Reservation) : return (reservation: Reservation)
-  where reservation exists
+cancel(reservation: Reservation) : returns (reservation: Reservation)
+  where reservation is in Reservations
   then
     remove reservation
-    return reservation
-  where reservation does not exist
+    returns reservation
+  where reservation is not in Reservations
   then
-    refuse NO_SUCH_RESERVATION "There is no such reservation."
+    refuses NO_SUCH_RESERVATION "There is no such reservation."
 ```
 
 ## Queries
