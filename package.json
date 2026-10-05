@@ -29,5 +29,8 @@
     "db:shell": "podman compose exec mongo mongosh -u dev -p dev",
     "db:logs": "podman compose logs mongo",
     "db:reset": "podman compose down -v"
+  },
+  "overrides": {
+    "bson": "7.2.0"
   }
 }
